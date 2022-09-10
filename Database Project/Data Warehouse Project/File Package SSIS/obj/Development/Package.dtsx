@@ -1,0 +1,2476 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="4/26/2022 4:33:42 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-15PDMBP"
+  DTS:CreatorName="DESKTOP-15PDMBP\user"
+  DTS:DTSID="{561A3485-500A-4193-A470-FA48ED6383F5}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.180"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:VersionBuild="6"
+  DTS:VersionGUID="{7E4887F3-3726-4F9C-B89B-4F8C1D72784F}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-15PDMBP.DEP302_ASM1]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{0B52683B-5C41-40E4-A83C-77D91A3B4234}"
+      DTS:ObjectName="DESKTOP-15PDMBP.DEP302_ASM1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=DESKTOP-15PDMBP;Initial Catalog=DEP302_ASM1;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-15PDMBP.DEP302_ASM1 1]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{F3B0A417-D4B2-46A6-8B69-151B255B2BFC}"
+      DTS:ObjectName="DESKTOP-15PDMBP.DEP302_ASM1 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=DESKTOP-15PDMBP;Initial Catalog=DEP302_ASM1;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{62763C06-00FD-480D-ADDF-3245FF1ADB2E}"
+      DTS:ObjectName="Flat File Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="932"
+          DTS:ConnectionString="D:\Data Engineer\DEP302\Assignment 1 Xay Dung DataWarehouse\PetFinder.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="2"
+              DTS:TextQualified="True"
+              DTS:ObjectName="PetID"
+              DTS:DTSID="{CA1F138D-D168-40D8-9B5D-4DBBD9C5DC91}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="3"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Type"
+              DTS:DTSID="{B3D2B0A0-14FB-41E0-B0ED-892E8B3D2E4C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Name"
+              DTS:DTSID="{9107381A-4CE7-49E6-A76A-046BCB59E723}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="16"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Age"
+              DTS:DTSID="{30CA7982-FCEF-49D3-93FB-00DC22126C96}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="30"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Breed1"
+              DTS:DTSID="{3822E1D0-998C-42D2-9240-F8F4F867EF9A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="20"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Breed2"
+              DTS:DTSID="{0977F7D2-A41B-4A67-922D-74BBFB2C0E5F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="6"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Gender"
+              DTS:DTSID="{35B3A6C1-769F-45EC-AB4A-29B82D94C51B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="6"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Color1"
+              DTS:DTSID="{61A9F39A-8090-4D6E-925D-DF32445D426A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="6"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Color2"
+              DTS:DTSID="{E61D9B88-A80B-4677-9228-941C507DEB92}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="6"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Color3"
+              DTS:DTSID="{71E56A7B-08E6-4A45-8DC1-F050BE81A24F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="6"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="MaturitySize"
+              DTS:DTSID="{CC12FD90-5366-45B5-B987-F5122DD01D92}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="6"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="FurLength"
+              DTS:DTSID="{18FA8C98-5592-4319-928E-46FD83F9A9BE}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="8"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Vaccinated"
+              DTS:DTSID="{F9D39A93-8737-4EF1-81B0-3A0FD599E48A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="8"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Dewormed"
+              DTS:DTSID="{B5E83222-8CD0-4954-B207-D72755253517}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="8"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Sterilized"
+              DTS:DTSID="{158E6272-E9F5-43DF-850C-479DFA712186}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="12"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Health"
+              DTS:DTSID="{DB65F9DC-E2A6-434E-BC7C-3BCAB0A1E027}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="16"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Quantity"
+              DTS:DTSID="{CDD85BC3-9878-4E19-84BA-6A914DFA26F1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="2"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Fee"
+              DTS:DTSID="{7FCEC551-972B-4DD3-8EE4-566E6F89B38F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="15"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="State"
+              DTS:DTSID="{97CC3B79-9951-4D4F-89C7-5007BCFD33B2}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="RescuerID"
+              DTS:DTSID="{13263E13-2B70-466E-AFC5-2CE6B78A2D7F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000A_"
+              DTS:MaximumWidth="2000"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Description"
+              DTS:DTSID="{7FA5880F-F546-4F73-8C49-DF32634DC6CB}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Breed_DIM"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{E42B1212-BC2D-4399-8B83-935F689FE622}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Breed_DIM"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Color_DIM"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{B17BD4EC-7689-4E43-846E-2D90D6B185CC}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Color_DIM"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Color_DIM\Flat File Source"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1033"
+              name="Flat File Source"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Color_DIM\Flat File Source.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager]"
+                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Color_DIM\Flat File Source.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Color_DIM\Flat File Source.Outputs[Flat File Source Output].Columns[Color1]"
+                      codePage="932"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Color_DIM\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Color1]"
+                      length="6"
+                      lineageId="Package\Color_DIM\Flat File Source.Outputs[Flat File Source Output].Columns[Color1]"
+                      name="Color1"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Color_DIM\Flat File Source.Outputs[Flat File Source Output].Columns[Color2]"
+                      codePage="932"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Color_DIM\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Color2]"
+                      length="6"
+                      lineageId="Package\Color_DIM\Flat File Source.Outputs[Flat File Source Output].Columns[Color2]"
+                      name="Color2"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Color_DIM\Flat File Source.Outputs[Flat File Source Output].Columns[Color3]"
+                      codePage="932"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Color_DIM\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Color3]"
+                      length="6"
+                      lineageId="Package\Color_DIM\Flat File Source.Outputs[Flat File Source Output].Columns[Color3]"
+                      name="Color3"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Color_DIM\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[PetID]"
+                      dataType="i2"
+                      name="PetID" />
+                    <externalMetadataColumn
+                      refId="Package\Color_DIM\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Type]"
+                      codePage="932"
+                      dataType="str"
+                      length="3"
+                      name="Type" />
+                    <externalMetadataColumn
+                      refId="Package\Color_DIM\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Name]"
+                      dataType="wstr"
+                      length="50"
+                      name="Name" />
+                    <externalMetadataColumn
+                      refId="Package\Color_DIM\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Age]"
+                      dataType="i1"
+                      name="Age" />
+                    <externalMetadataColumn
+                      refId="Package\Color_DIM\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Breed1]"
+                      codePage="932"
+                      dataType="str"
+                      length="30"
+                      name="Breed1" />
+                    <externalMetadataColumn
+                      refId="Package\Color_DIM\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Breed2]"
+                      codePage="932"
+                      dataType="str"
+                      length="20"
+                      name="Breed2" />
+                    <externalMetadataColumn
+                      refId="Package\Color_DIM\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Gender]"
+                      codePage="932"
+                      dataType="str"
+                      length="6"
+                      name="Gender" />
+                    <externalMetadataColumn
+                      refId="Package\Color_DIM\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Color1]"
+                      codePage="932"
+                      dataType="str"
+                      length="6"
+                      name="Color1" />
+                    <externalMetadataColumn
+                      refId="Package\Color_DIM\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Color2]"
+                      codePage="932"
+                      dataType="str"
+                      length="6"
+                      name="Color2" />
+                    <externalMetadataColumn
+                      refId="Package\Color_DIM\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Color3]"
+                      codePage="932"
+                      dataType="str"
+                      length="6"
+                      name="Color3" />
+                    <externalMetadataColumn
+                      refId="Package\Color_DIM\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[MaturitySize]"
+                      codePage="932"
+                      dataType="str"
+                      length="6"
+                      name="MaturitySize" />
+                    <externalMetadataColumn
+                      refId="Package\Color_DIM\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[FurLength]"
+                      codePage="932"
+                      dataType="str"
+                      length="6"
+                      name="FurLength" />
+                    <externalMetadataColumn
+                      refId="Package\Color_DIM\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Vaccinated]"
+                      codePage="932"
+                      dataType="str"
+                      length="8"
+                      name="Vaccinated" />
+                    <externalMetadataColumn
+                      refId="Package\Color_DIM\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Dewormed]"
+                      codePage="932"
+                      dataType="str"
+                      length="8"
+                      name="Dewormed" />
+                    <externalMetadataColumn
+                      refId="Package\Color_DIM\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Sterilized]"
+                      codePage="932"
+                      dataType="str"
+                      length="8"
+                      name="Sterilized" />
+                    <externalMetadataColumn
+                      refId="Package\Color_DIM\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Health]"
+                      codePage="932"
+                      dataType="str"
+                      length="12"
+                      name="Health" />
+                    <externalMetadataColumn
+                      refId="Package\Color_DIM\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Quantity]"
+                      dataType="i1"
+                      name="Quantity" />
+                    <externalMetadataColumn
+                      refId="Package\Color_DIM\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Fee]"
+                      dataType="i2"
+                      name="Fee" />
+                    <externalMetadataColumn
+                      refId="Package\Color_DIM\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[State]"
+                      codePage="932"
+                      dataType="str"
+                      length="15"
+                      name="State" />
+                    <externalMetadataColumn
+                      refId="Package\Color_DIM\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[RescuerID]"
+                      dataType="i4"
+                      name="RescuerID" />
+                    <externalMetadataColumn
+                      refId="Package\Color_DIM\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Description]"
+                      dataType="wstr"
+                      length="2000"
+                      name="Description" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Color_DIM\Flat File Source.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Color_DIM\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="932"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Color_DIM\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Color_DIM\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Color_DIM\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Color_DIM\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Color_DIM\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Color_DIM\Lookup"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+              name="Lookup"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement that generates the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[Color_DIM]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[Color_DIM]) [refTable]
+where [refTable].[Color1] = ? and [refTable].[Color2] = ? and [refTable].[Color3] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of connection used to access the reference dataset."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the cache type of the lookup table."
+                  name="CacheType"
+                  typeConverter="CacheType">2</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">1</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indicates whether to reference metadata in an XML format."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="Color_ID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Color1" dataType="DT_STR" length="255" precision="0" scale="0" codePage="932"/&gt;&lt;referenceColumn name="Color2" dataType="DT_STR" length="255" precision="0" scale="0" codePage="932"/&gt;&lt;referenceColumn name="Color3" dataType="DT_STR" length="255" precision="0" scale="0" codePage="932"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                  name="ParameterMap">#{Package\Color_DIM\Sort.Outputs[Sort Output].Columns[Color1]};#{Package\Color_DIM\Sort.Outputs[Sort Output].Columns[Color2]};#{Package\Color_DIM\Sort.Outputs[Sort Output].Columns[Color3]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Color_DIM\Lookup.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-15PDMBP.DEP302_ASM1]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-15PDMBP.DEP302_ASM1]"
+                  description="Connection manager used to access lookup data."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Color_DIM\Lookup.Inputs[Lookup Input]"
+                  name="Lookup Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Color_DIM\Lookup.Inputs[Lookup Input].Columns[Color1]"
+                      cachedCodepage="932"
+                      cachedDataType="str"
+                      cachedLength="6"
+                      cachedName="Color1"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\Color_DIM\Sort.Outputs[Sort Output].Columns[Color1]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">Color1</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Color_DIM\Lookup.Inputs[Lookup Input].Columns[Color2]"
+                      cachedCodepage="932"
+                      cachedDataType="str"
+                      cachedLength="6"
+                      cachedName="Color2"
+                      cachedSortKeyPosition="2"
+                      lineageId="Package\Color_DIM\Sort.Outputs[Sort Output].Columns[Color2]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">Color2</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Color_DIM\Lookup.Inputs[Lookup Input].Columns[Color3]"
+                      cachedCodepage="932"
+                      cachedDataType="str"
+                      cachedLength="6"
+                      cachedName="Color3"
+                      cachedSortKeyPosition="3"
+                      lineageId="Package\Color_DIM\Sort.Outputs[Sort Output].Columns[Color3]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">Color3</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Color_DIM\Lookup.Outputs[Lookup Match Output]"
+                  errorOrTruncationOperation="Lookup"
+                  exclusionGroup="1"
+                  name="Lookup Match Output"
+                  synchronousInputId="Package\Color_DIM\Lookup.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Color_DIM\Lookup.Outputs[Lookup Match Output].Columns[Color_ID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Color_DIM\Lookup.Outputs[Lookup Match Output].Columns[Color_ID]"
+                      name="Color_ID"
+                      truncationRowDisposition="IgnoreFailure">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">Color_ID</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Color_DIM\Lookup.Outputs[Lookup Match Output].Columns[Color1]"
+                      codePage="932"
+                      dataType="str"
+                      errorOrTruncationOperation="Copy Column"
+                      length="255"
+                      lineageId="Package\Color_DIM\Lookup.Outputs[Lookup Match Output].Columns[Color1]"
+                      name="Color1"
+                      truncationRowDisposition="IgnoreFailure">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">Color1</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Color_DIM\Lookup.Outputs[Lookup Match Output].Columns[Color2]"
+                      codePage="932"
+                      dataType="str"
+                      errorOrTruncationOperation="Copy Column"
+                      length="255"
+                      lineageId="Package\Color_DIM\Lookup.Outputs[Lookup Match Output].Columns[Color2]"
+                      name="Color2"
+                      truncationRowDisposition="IgnoreFailure">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">Color2</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Color_DIM\Lookup.Outputs[Lookup Match Output].Columns[Color3]"
+                      codePage="932"
+                      dataType="str"
+                      errorOrTruncationOperation="Copy Column"
+                      length="255"
+                      lineageId="Package\Color_DIM\Lookup.Outputs[Lookup Match Output].Columns[Color3]"
+                      name="Color3"
+                      truncationRowDisposition="IgnoreFailure">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">Color3</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Color_DIM\Lookup.Outputs[Lookup No Match Output]"
+                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                  exclusionGroup="1"
+                  name="Lookup No Match Output"
+                  synchronousInputId="Package\Color_DIM\Lookup.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Color_DIM\Lookup.Outputs[Lookup Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Lookup Error Output"
+                  synchronousInputId="Package\Color_DIM\Lookup.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Color_DIM\Lookup.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Color_DIM\Lookup.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Color_DIM\Lookup.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Color_DIM\Lookup.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Color_DIM\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Color_DIM]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Color_DIM\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-15PDMBP.DEP302_ASM1 1]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-15PDMBP.DEP302_ASM1 1]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Color_DIM\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="IgnoreFailure"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Color_DIM\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Color1]"
+                      cachedCodepage="932"
+                      cachedDataType="str"
+                      cachedLength="6"
+                      cachedName="Color1"
+                      cachedSortKeyPosition="1"
+                      externalMetadataColumnId="Package\Color_DIM\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Color1]"
+                      lineageId="Package\Color_DIM\Sort.Outputs[Sort Output].Columns[Color1]" />
+                    <inputColumn
+                      refId="Package\Color_DIM\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Color2]"
+                      cachedCodepage="932"
+                      cachedDataType="str"
+                      cachedLength="6"
+                      cachedName="Color2"
+                      cachedSortKeyPosition="2"
+                      externalMetadataColumnId="Package\Color_DIM\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Color2]"
+                      lineageId="Package\Color_DIM\Sort.Outputs[Sort Output].Columns[Color2]" />
+                    <inputColumn
+                      refId="Package\Color_DIM\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Color3]"
+                      cachedCodepage="932"
+                      cachedDataType="str"
+                      cachedLength="6"
+                      cachedName="Color3"
+                      cachedSortKeyPosition="3"
+                      externalMetadataColumnId="Package\Color_DIM\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Color3]"
+                      lineageId="Package\Color_DIM\Sort.Outputs[Sort Output].Columns[Color3]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Color_DIM\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Color_ID]"
+                      dataType="i4"
+                      name="Color_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Color_DIM\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Color1]"
+                      codePage="932"
+                      dataType="str"
+                      length="255"
+                      name="Color1" />
+                    <externalMetadataColumn
+                      refId="Package\Color_DIM\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Color2]"
+                      codePage="932"
+                      dataType="str"
+                      length="255"
+                      name="Color2" />
+                    <externalMetadataColumn
+                      refId="Package\Color_DIM\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Color3]"
+                      codePage="932"
+                      dataType="str"
+                      length="255"
+                      name="Color3" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Color_DIM\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Color_DIM\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Color_DIM\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Color_DIM\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Color_DIM\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Color_DIM\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Color_DIM\Sort"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
+              name="Sort"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the Sort transformation removes rows with duplicate sort values."
+                  name="EliminateDuplicates">true</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the maximum number of threads to use for sorting."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Color_DIM\Sort.Inputs[Sort Input]"
+                  name="Sort Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Color_DIM\Sort.Inputs[Sort Input].Columns[Color1]"
+                      cachedCodepage="932"
+                      cachedDataType="str"
+                      cachedLength="6"
+                      cachedName="Color1"
+                      lineageId="Package\Color_DIM\Flat File Source.Outputs[Flat File Source Output].Columns[Color1]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Color_DIM\Sort.Inputs[Sort Input].Columns[Color2]"
+                      cachedCodepage="932"
+                      cachedDataType="str"
+                      cachedLength="6"
+                      cachedName="Color2"
+                      lineageId="Package\Color_DIM\Flat File Source.Outputs[Flat File Source Output].Columns[Color2]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">2</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Color_DIM\Sort.Inputs[Sort Input].Columns[Color3]"
+                      cachedCodepage="932"
+                      cachedDataType="str"
+                      cachedLength="6"
+                      cachedName="Color3"
+                      lineageId="Package\Color_DIM\Flat File Source.Outputs[Flat File Source Output].Columns[Color3]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">3</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Color_DIM\Sort.Outputs[Sort Output]"
+                  isSorted="true"
+                  name="Sort Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Color_DIM\Sort.Outputs[Sort Output].Columns[Color1]"
+                      codePage="932"
+                      dataType="str"
+                      length="6"
+                      lineageId="Package\Color_DIM\Sort.Outputs[Sort Output].Columns[Color1]"
+                      name="Color1"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Color_DIM\Flat File Source.Outputs[Flat File Source Output].Columns[Color1]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Color_DIM\Sort.Outputs[Sort Output].Columns[Color2]"
+                      codePage="932"
+                      dataType="str"
+                      length="6"
+                      lineageId="Package\Color_DIM\Sort.Outputs[Sort Output].Columns[Color2]"
+                      name="Color2"
+                      sortKeyPosition="2">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Color_DIM\Flat File Source.Outputs[Flat File Source Output].Columns[Color2]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Color_DIM\Sort.Outputs[Sort Output].Columns[Color3]"
+                      codePage="932"
+                      dataType="str"
+                      length="6"
+                      lineageId="Package\Color_DIM\Sort.Outputs[Sort Output].Columns[Color3]"
+                      name="Color3"
+                      sortKeyPosition="3">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Color_DIM\Flat File Source.Outputs[Flat File Source Output].Columns[Color3]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Color_DIM.Paths[Flat File Source Output]"
+              endId="Package\Color_DIM\Sort.Inputs[Sort Input]"
+              name="Flat File Source Output"
+              startId="Package\Color_DIM\Flat File Source.Outputs[Flat File Source Output]" />
+            <path
+              refId="Package\Color_DIM.Paths[Lookup No Match Output]"
+              endId="Package\Color_DIM\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="Lookup No Match Output"
+              startId="Package\Color_DIM\Lookup.Outputs[Lookup No Match Output]" />
+            <path
+              refId="Package\Color_DIM.Paths[Sort Output]"
+              endId="Package\Color_DIM\Lookup.Inputs[Lookup Input]"
+              name="Sort Output"
+              startId="Package\Color_DIM\Sort.Outputs[Sort Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Health_DIM"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{78F56494-D46B-41E5-A173-E628C2B6D940}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Health_DIM"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Pet_DIM"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{3B19AC53-061C-45F3-840C-0B9F8E379658}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Pet_DIM"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Pet_DIM\Flat File Source"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1033"
+              name="Flat File Source"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">true</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Pet_DIM\Flat File Source.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager]"
+                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Pet_DIM\Flat File Source.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Pet_DIM\Flat File Source.Outputs[Flat File Source Output].Columns[PetID]"
+                      dataType="i2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="IgnoreFailure"
+                      externalMetadataColumnId="Package\Pet_DIM\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[PetID]"
+                      lineageId="Package\Pet_DIM\Flat File Source.Outputs[Flat File Source Output].Columns[PetID]"
+                      name="PetID"
+                      truncationRowDisposition="IgnoreFailure">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Pet_DIM\Flat File Source.Outputs[Flat File Source Output].Columns[Type]"
+                      codePage="932"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="IgnoreFailure"
+                      externalMetadataColumnId="Package\Pet_DIM\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Type]"
+                      length="3"
+                      lineageId="Package\Pet_DIM\Flat File Source.Outputs[Flat File Source Output].Columns[Type]"
+                      name="Type"
+                      truncationRowDisposition="IgnoreFailure">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Pet_DIM\Flat File Source.Outputs[Flat File Source Output].Columns[Name]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="IgnoreFailure"
+                      externalMetadataColumnId="Package\Pet_DIM\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Name]"
+                      length="50"
+                      lineageId="Package\Pet_DIM\Flat File Source.Outputs[Flat File Source Output].Columns[Name]"
+                      name="Name"
+                      truncationRowDisposition="IgnoreFailure">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Pet_DIM\Flat File Source.Outputs[Flat File Source Output].Columns[Age]"
+                      dataType="i1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="IgnoreFailure"
+                      externalMetadataColumnId="Package\Pet_DIM\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Age]"
+                      lineageId="Package\Pet_DIM\Flat File Source.Outputs[Flat File Source Output].Columns[Age]"
+                      name="Age"
+                      truncationRowDisposition="IgnoreFailure">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Pet_DIM\Flat File Source.Outputs[Flat File Source Output].Columns[Gender]"
+                      codePage="932"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="IgnoreFailure"
+                      externalMetadataColumnId="Package\Pet_DIM\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Gender]"
+                      length="6"
+                      lineageId="Package\Pet_DIM\Flat File Source.Outputs[Flat File Source Output].Columns[Gender]"
+                      name="Gender"
+                      truncationRowDisposition="IgnoreFailure">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Pet_DIM\Flat File Source.Outputs[Flat File Source Output].Columns[MaturitySize]"
+                      codePage="932"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="IgnoreFailure"
+                      externalMetadataColumnId="Package\Pet_DIM\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[MaturitySize]"
+                      length="6"
+                      lineageId="Package\Pet_DIM\Flat File Source.Outputs[Flat File Source Output].Columns[MaturitySize]"
+                      name="MaturitySize"
+                      truncationRowDisposition="IgnoreFailure">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Pet_DIM\Flat File Source.Outputs[Flat File Source Output].Columns[FurLength]"
+                      codePage="932"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="IgnoreFailure"
+                      externalMetadataColumnId="Package\Pet_DIM\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[FurLength]"
+                      length="6"
+                      lineageId="Package\Pet_DIM\Flat File Source.Outputs[Flat File Source Output].Columns[FurLength]"
+                      name="FurLength"
+                      truncationRowDisposition="IgnoreFailure">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Pet_DIM\Flat File Source.Outputs[Flat File Source Output].Columns[Description]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="IgnoreFailure"
+                      externalMetadataColumnId="Package\Pet_DIM\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Description]"
+                      length="2000"
+                      lineageId="Package\Pet_DIM\Flat File Source.Outputs[Flat File Source Output].Columns[Description]"
+                      name="Description"
+                      truncationRowDisposition="IgnoreFailure">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Pet_DIM\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[PetID]"
+                      dataType="i2"
+                      name="PetID" />
+                    <externalMetadataColumn
+                      refId="Package\Pet_DIM\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Type]"
+                      codePage="932"
+                      dataType="str"
+                      length="3"
+                      name="Type" />
+                    <externalMetadataColumn
+                      refId="Package\Pet_DIM\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Name]"
+                      dataType="wstr"
+                      length="50"
+                      name="Name" />
+                    <externalMetadataColumn
+                      refId="Package\Pet_DIM\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Age]"
+                      dataType="i1"
+                      name="Age" />
+                    <externalMetadataColumn
+                      refId="Package\Pet_DIM\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Breed1]"
+                      codePage="932"
+                      dataType="str"
+                      length="30"
+                      name="Breed1" />
+                    <externalMetadataColumn
+                      refId="Package\Pet_DIM\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Breed2]"
+                      codePage="932"
+                      dataType="str"
+                      length="20"
+                      name="Breed2" />
+                    <externalMetadataColumn
+                      refId="Package\Pet_DIM\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Gender]"
+                      codePage="932"
+                      dataType="str"
+                      length="6"
+                      name="Gender" />
+                    <externalMetadataColumn
+                      refId="Package\Pet_DIM\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Color1]"
+                      codePage="932"
+                      dataType="str"
+                      length="6"
+                      name="Color1" />
+                    <externalMetadataColumn
+                      refId="Package\Pet_DIM\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Color2]"
+                      codePage="932"
+                      dataType="str"
+                      length="6"
+                      name="Color2" />
+                    <externalMetadataColumn
+                      refId="Package\Pet_DIM\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Color3]"
+                      codePage="932"
+                      dataType="str"
+                      length="6"
+                      name="Color3" />
+                    <externalMetadataColumn
+                      refId="Package\Pet_DIM\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[MaturitySize]"
+                      codePage="932"
+                      dataType="str"
+                      length="6"
+                      name="MaturitySize" />
+                    <externalMetadataColumn
+                      refId="Package\Pet_DIM\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[FurLength]"
+                      codePage="932"
+                      dataType="str"
+                      length="6"
+                      name="FurLength" />
+                    <externalMetadataColumn
+                      refId="Package\Pet_DIM\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Vaccinated]"
+                      codePage="932"
+                      dataType="str"
+                      length="8"
+                      name="Vaccinated" />
+                    <externalMetadataColumn
+                      refId="Package\Pet_DIM\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Dewormed]"
+                      codePage="932"
+                      dataType="str"
+                      length="8"
+                      name="Dewormed" />
+                    <externalMetadataColumn
+                      refId="Package\Pet_DIM\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Sterilized]"
+                      codePage="932"
+                      dataType="str"
+                      length="8"
+                      name="Sterilized" />
+                    <externalMetadataColumn
+                      refId="Package\Pet_DIM\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Health]"
+                      codePage="932"
+                      dataType="str"
+                      length="12"
+                      name="Health" />
+                    <externalMetadataColumn
+                      refId="Package\Pet_DIM\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Quantity]"
+                      dataType="i1"
+                      name="Quantity" />
+                    <externalMetadataColumn
+                      refId="Package\Pet_DIM\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Fee]"
+                      dataType="i2"
+                      name="Fee" />
+                    <externalMetadataColumn
+                      refId="Package\Pet_DIM\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[State]"
+                      codePage="932"
+                      dataType="str"
+                      length="15"
+                      name="State" />
+                    <externalMetadataColumn
+                      refId="Package\Pet_DIM\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[RescuerID]"
+                      dataType="i4"
+                      name="RescuerID" />
+                    <externalMetadataColumn
+                      refId="Package\Pet_DIM\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Description]"
+                      dataType="wstr"
+                      length="2000"
+                      name="Description" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Pet_DIM\Flat File Source.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Pet_DIM\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="932"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Pet_DIM\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Pet_DIM\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Pet_DIM\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Pet_DIM\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Pet_DIM\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Pet_DIM\Lookup"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+              name="Lookup"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement that generates the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[Pet_DIM]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[Pet_DIM]) [refTable]
+where [refTable].[Name] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of connection used to access the reference dataset."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the cache type of the lookup table."
+                  name="CacheType"
+                  typeConverter="CacheType">2</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">1</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indicates whether to reference metadata in an XML format."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="Pet_ID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Type" dataType="DT_STR" length="3" precision="0" scale="0" codePage="932"/&gt;&lt;referenceColumn name="Name" dataType="DT_WSTR" length="255" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Age" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Gender" dataType="DT_STR" length="6" precision="0" scale="0" codePage="932"/&gt;&lt;referenceColumn name="MaturitySize" dataType="DT_STR" length="13" precision="0" scale="0" codePage="932"/&gt;&lt;referenceColumn name="FurLength" dataType="DT_STR" length="13" precision="0" scale="0" codePage="932"/&gt;&lt;referenceColumn name="Description" dataType="DT_WSTR" length="2000" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                  name="ParameterMap">#{Package\Pet_DIM\Sort.Outputs[Sort Output].Columns[Name]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Pet_DIM\Lookup.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-15PDMBP.DEP302_ASM1]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-15PDMBP.DEP302_ASM1]"
+                  description="Connection manager used to access lookup data."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Pet_DIM\Lookup.Inputs[Lookup Input]"
+                  name="Lookup Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Pet_DIM\Lookup.Inputs[Lookup Input].Columns[Name]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Name"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\Pet_DIM\Sort.Outputs[Sort Output].Columns[Name]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">Name</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Pet_DIM\Lookup.Outputs[Lookup Match Output]"
+                  errorOrTruncationOperation="Lookup"
+                  exclusionGroup="1"
+                  name="Lookup Match Output"
+                  synchronousInputId="Package\Pet_DIM\Lookup.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Pet_DIM\Lookup.Outputs[Lookup Match Output].Columns[Name]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Copy Column"
+                      length="255"
+                      lineageId="Package\Pet_DIM\Lookup.Outputs[Lookup Match Output].Columns[Name]"
+                      name="Name"
+                      truncationRowDisposition="IgnoreFailure">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">Name</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Pet_DIM\Lookup.Outputs[Lookup No Match Output]"
+                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                  exclusionGroup="1"
+                  name="Lookup No Match Output"
+                  synchronousInputId="Package\Pet_DIM\Lookup.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Pet_DIM\Lookup.Outputs[Lookup Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Lookup Error Output"
+                  synchronousInputId="Package\Pet_DIM\Lookup.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Pet_DIM\Lookup.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Pet_DIM\Lookup.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Pet_DIM\Lookup.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Pet_DIM\Lookup.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Pet_DIM\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Pet_DIM]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Pet_DIM\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-15PDMBP.DEP302_ASM1 1]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-15PDMBP.DEP302_ASM1 1]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Pet_DIM\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="IgnoreFailure"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Pet_DIM\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Type]"
+                      cachedCodepage="932"
+                      cachedDataType="str"
+                      cachedLength="3"
+                      cachedName="Type"
+                      externalMetadataColumnId="Package\Pet_DIM\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Type]"
+                      lineageId="Package\Pet_DIM\Sort.Outputs[Sort Output].Columns[Type]" />
+                    <inputColumn
+                      refId="Package\Pet_DIM\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Name]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Name"
+                      cachedSortKeyPosition="1"
+                      externalMetadataColumnId="Package\Pet_DIM\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Name]"
+                      lineageId="Package\Pet_DIM\Sort.Outputs[Sort Output].Columns[Name]" />
+                    <inputColumn
+                      refId="Package\Pet_DIM\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Age]"
+                      cachedDataType="i1"
+                      cachedName="Age"
+                      externalMetadataColumnId="Package\Pet_DIM\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Age]"
+                      lineageId="Package\Pet_DIM\Sort.Outputs[Sort Output].Columns[Age]" />
+                    <inputColumn
+                      refId="Package\Pet_DIM\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Gender]"
+                      cachedCodepage="932"
+                      cachedDataType="str"
+                      cachedLength="6"
+                      cachedName="Gender"
+                      externalMetadataColumnId="Package\Pet_DIM\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Gender]"
+                      lineageId="Package\Pet_DIM\Sort.Outputs[Sort Output].Columns[Gender]" />
+                    <inputColumn
+                      refId="Package\Pet_DIM\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[MaturitySize]"
+                      cachedCodepage="932"
+                      cachedDataType="str"
+                      cachedLength="6"
+                      cachedName="MaturitySize"
+                      externalMetadataColumnId="Package\Pet_DIM\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[MaturitySize]"
+                      lineageId="Package\Pet_DIM\Sort.Outputs[Sort Output].Columns[MaturitySize]" />
+                    <inputColumn
+                      refId="Package\Pet_DIM\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[FurLength]"
+                      cachedCodepage="932"
+                      cachedDataType="str"
+                      cachedLength="6"
+                      cachedName="FurLength"
+                      externalMetadataColumnId="Package\Pet_DIM\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FurLength]"
+                      lineageId="Package\Pet_DIM\Sort.Outputs[Sort Output].Columns[FurLength]" />
+                    <inputColumn
+                      refId="Package\Pet_DIM\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Description]"
+                      cachedDataType="wstr"
+                      cachedLength="2000"
+                      cachedName="Description"
+                      externalMetadataColumnId="Package\Pet_DIM\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Description]"
+                      lineageId="Package\Pet_DIM\Sort.Outputs[Sort Output].Columns[Description]" />
+                    <inputColumn
+                      refId="Package\Pet_DIM\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[PetID]"
+                      cachedDataType="i2"
+                      cachedName="PetID"
+                      externalMetadataColumnId="Package\Pet_DIM\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Pet_ID]"
+                      lineageId="Package\Pet_DIM\Sort.Outputs[Sort Output].Columns[PetID]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Pet_DIM\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Pet_ID]"
+                      dataType="i4"
+                      name="Pet_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Pet_DIM\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Type]"
+                      codePage="932"
+                      dataType="str"
+                      length="3"
+                      name="Type" />
+                    <externalMetadataColumn
+                      refId="Package\Pet_DIM\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Name]"
+                      dataType="wstr"
+                      length="255"
+                      name="Name" />
+                    <externalMetadataColumn
+                      refId="Package\Pet_DIM\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Age]"
+                      dataType="i4"
+                      name="Age" />
+                    <externalMetadataColumn
+                      refId="Package\Pet_DIM\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Gender]"
+                      codePage="932"
+                      dataType="str"
+                      length="6"
+                      name="Gender" />
+                    <externalMetadataColumn
+                      refId="Package\Pet_DIM\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[MaturitySize]"
+                      codePage="932"
+                      dataType="str"
+                      length="13"
+                      name="MaturitySize" />
+                    <externalMetadataColumn
+                      refId="Package\Pet_DIM\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FurLength]"
+                      codePage="932"
+                      dataType="str"
+                      length="13"
+                      name="FurLength" />
+                    <externalMetadataColumn
+                      refId="Package\Pet_DIM\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Description]"
+                      dataType="wstr"
+                      length="2000"
+                      name="Description" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Pet_DIM\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Pet_DIM\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Pet_DIM\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Pet_DIM\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Pet_DIM\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Pet_DIM\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Pet_DIM\Sort"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
+              name="Sort"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the Sort transformation removes rows with duplicate sort values."
+                  name="EliminateDuplicates">true</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the maximum number of threads to use for sorting."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Pet_DIM\Sort.Inputs[Sort Input]"
+                  name="Sort Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Pet_DIM\Sort.Inputs[Sort Input].Columns[PetID]"
+                      cachedDataType="i2"
+                      cachedName="PetID"
+                      lineageId="Package\Pet_DIM\Flat File Source.Outputs[Flat File Source Output].Columns[PetID]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Pet_DIM\Sort.Inputs[Sort Input].Columns[Type]"
+                      cachedCodepage="932"
+                      cachedDataType="str"
+                      cachedLength="3"
+                      cachedName="Type"
+                      lineageId="Package\Pet_DIM\Flat File Source.Outputs[Flat File Source Output].Columns[Type]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Pet_DIM\Sort.Inputs[Sort Input].Columns[Name]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Name"
+                      lineageId="Package\Pet_DIM\Flat File Source.Outputs[Flat File Source Output].Columns[Name]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Pet_DIM\Sort.Inputs[Sort Input].Columns[Age]"
+                      cachedDataType="i1"
+                      cachedName="Age"
+                      lineageId="Package\Pet_DIM\Flat File Source.Outputs[Flat File Source Output].Columns[Age]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Pet_DIM\Sort.Inputs[Sort Input].Columns[Gender]"
+                      cachedCodepage="932"
+                      cachedDataType="str"
+                      cachedLength="6"
+                      cachedName="Gender"
+                      lineageId="Package\Pet_DIM\Flat File Source.Outputs[Flat File Source Output].Columns[Gender]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Pet_DIM\Sort.Inputs[Sort Input].Columns[MaturitySize]"
+                      cachedCodepage="932"
+                      cachedDataType="str"
+                      cachedLength="6"
+                      cachedName="MaturitySize"
+                      lineageId="Package\Pet_DIM\Flat File Source.Outputs[Flat File Source Output].Columns[MaturitySize]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Pet_DIM\Sort.Inputs[Sort Input].Columns[FurLength]"
+                      cachedCodepage="932"
+                      cachedDataType="str"
+                      cachedLength="6"
+                      cachedName="FurLength"
+                      lineageId="Package\Pet_DIM\Flat File Source.Outputs[Flat File Source Output].Columns[FurLength]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Pet_DIM\Sort.Inputs[Sort Input].Columns[Description]"
+                      cachedDataType="wstr"
+                      cachedLength="2000"
+                      cachedName="Description"
+                      lineageId="Package\Pet_DIM\Flat File Source.Outputs[Flat File Source Output].Columns[Description]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Pet_DIM\Sort.Outputs[Sort Output]"
+                  isSorted="true"
+                  name="Sort Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Pet_DIM\Sort.Outputs[Sort Output].Columns[PetID]"
+                      dataType="i2"
+                      lineageId="Package\Pet_DIM\Sort.Outputs[Sort Output].Columns[PetID]"
+                      name="PetID">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Pet_DIM\Flat File Source.Outputs[Flat File Source Output].Columns[PetID]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Pet_DIM\Sort.Outputs[Sort Output].Columns[Type]"
+                      codePage="932"
+                      dataType="str"
+                      length="3"
+                      lineageId="Package\Pet_DIM\Sort.Outputs[Sort Output].Columns[Type]"
+                      name="Type">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Pet_DIM\Flat File Source.Outputs[Flat File Source Output].Columns[Type]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Pet_DIM\Sort.Outputs[Sort Output].Columns[Name]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Pet_DIM\Sort.Outputs[Sort Output].Columns[Name]"
+                      name="Name"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Pet_DIM\Flat File Source.Outputs[Flat File Source Output].Columns[Name]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Pet_DIM\Sort.Outputs[Sort Output].Columns[Age]"
+                      dataType="i1"
+                      lineageId="Package\Pet_DIM\Sort.Outputs[Sort Output].Columns[Age]"
+                      name="Age">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Pet_DIM\Flat File Source.Outputs[Flat File Source Output].Columns[Age]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Pet_DIM\Sort.Outputs[Sort Output].Columns[Gender]"
+                      codePage="932"
+                      dataType="str"
+                      length="6"
+                      lineageId="Package\Pet_DIM\Sort.Outputs[Sort Output].Columns[Gender]"
+                      name="Gender">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Pet_DIM\Flat File Source.Outputs[Flat File Source Output].Columns[Gender]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Pet_DIM\Sort.Outputs[Sort Output].Columns[MaturitySize]"
+                      codePage="932"
+                      dataType="str"
+                      length="6"
+                      lineageId="Package\Pet_DIM\Sort.Outputs[Sort Output].Columns[MaturitySize]"
+                      name="MaturitySize">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Pet_DIM\Flat File Source.Outputs[Flat File Source Output].Columns[MaturitySize]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Pet_DIM\Sort.Outputs[Sort Output].Columns[FurLength]"
+                      codePage="932"
+                      dataType="str"
+                      length="6"
+                      lineageId="Package\Pet_DIM\Sort.Outputs[Sort Output].Columns[FurLength]"
+                      name="FurLength">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Pet_DIM\Flat File Source.Outputs[Flat File Source Output].Columns[FurLength]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Pet_DIM\Sort.Outputs[Sort Output].Columns[Description]"
+                      dataType="wstr"
+                      length="2000"
+                      lineageId="Package\Pet_DIM\Sort.Outputs[Sort Output].Columns[Description]"
+                      name="Description">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Pet_DIM\Flat File Source.Outputs[Flat File Source Output].Columns[Description]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Pet_DIM.Paths[Flat File Source Output]"
+              endId="Package\Pet_DIM\Sort.Inputs[Sort Input]"
+              name="Flat File Source Output"
+              startId="Package\Pet_DIM\Flat File Source.Outputs[Flat File Source Output]" />
+            <path
+              refId="Package\Pet_DIM.Paths[Lookup No Match Output]"
+              endId="Package\Pet_DIM\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="Lookup No Match Output"
+              startId="Package\Pet_DIM\Lookup.Outputs[Lookup No Match Output]" />
+            <path
+              refId="Package\Pet_DIM.Paths[Sort Output]"
+              endId="Package\Pet_DIM\Lookup.Inputs[Lookup Input]"
+              name="Sort Output"
+              startId="Package\Pet_DIM\Sort.Outputs[Sort Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Sale_DIM"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{D661A851-2114-48AF-AE35-C2144C4DB2E9}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Sale_DIM"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Transaction_FACT"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{EA9D1B71-FFDC-450F-8B8D-0EE105D8281A}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Transaction_FACT"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="129.509433962265,41.6603773584906"
+          Id="Package\Breed_DIM"
+          TopLeft="252.499980879655,203.999992658507" />
+        <NodeLayout
+          Size="126.792452830189,41.6603773584906"
+          Id="Package\Color_DIM"
+          TopLeft="452.499965734828,86.9999968690693" />
+        <NodeLayout
+          Size="132.22641509434,41.6603773584906"
+          Id="Package\Health_DIM"
+          TopLeft="650.833284049541,217.999992154679" />
+        <NodeLayout
+          Size="117.735849056604,41.6603773584906"
+          Id="Package\Pet_DIM"
+          TopLeft="258.833314149886,90.4999969410446" />
+        <NodeLayout
+          Size="121.358490566038,41.6603773584906"
+          Id="Package\Sale_DIM"
+          TopLeft="452.499965734828,198.999992838446" />
+        <NodeLayout
+          Size="168.45283018868,41.6603773584906"
+          Id="Package\Transaction_FACT"
+          TopLeft="638.333284996093,86.9999968690693" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Color_DIM">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="113.207547169812,41.6603773584906"
+          Id="Package\Color_DIM\Lookup"
+          TopLeft="512.999981538305,212.999992334618" />
+        <NodeLayout
+          Size="99.622641509434,41.6603773584906"
+          Id="Package\Color_DIM\Sort"
+          TopLeft="515.999981430342,117.99999575345" />
+        <NodeLayout
+          Size="155.773584905661,41.6603773584906"
+          Id="Package\Color_DIM\Flat File Source"
+          TopLeft="488.99998240201,22.9999991722827" />
+        <NodeLayout
+          Size="177.509433962265,41.6603773584906"
+          Id="Package\Color_DIM\OLE DB Destination"
+          TopLeft="454.166652540866,346.999987512264" />
+        <EdgeLayout
+          Id="Package\Color_DIM.Paths[Sort Output]"
+          TopLeft="567.707528654135,159.660373111941">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,53.3396192226769"
+              Start="0,0"
+              End="0,45.8396192226769">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,45.8396192226769" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Color_DIM.Paths[Lookup No Match Output]"
+          TopLeft="569.603755123211,254.660369693109">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-26.6823856012129,92.3396178191558"
+              Start="0,0"
+              End="-26.6823856012129,84.8396178191558">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,42.1698089095779" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,42.1698089095779"
+                    Point2="0,46.1698089095779"
+                    Point3="-4,46.1698089095779" />
+                  <mssgle:LineSegment
+                    End="-22.6823856012129,46.1698089095779" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-22.6823856012129,46.1698089095779"
+                    Point2="-26.6823856012129,46.1698089095779"
+                    Point3="-26.6823856012129,50.1698089095779" />
+                  <mssgle:LineSegment
+                    End="-26.6823856012129,84.8396178191558" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-69.1475795193564,51.1698089095779,111.6127734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Color_DIM.Paths[Flat File Source Output]"
+          TopLeft="566.349038519949,64.6603765307732">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,53.339619222677"
+              Start="0,0"
+              End="0,45.839619222677">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,45.839619222677" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Color_DIM\Lookup">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[Color_DIM]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Color_DIM\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Pet_DIM">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="177.509433962265,41.6603773584906"
+          Id="Package\Pet_DIM\OLE DB Destination"
+          TopLeft="373.333305062989,271.999990211343" />
+        <NodeLayout
+          Size="99.622641509434,41.6603773584906"
+          Id="Package\Pet_DIM\Sort"
+          TopLeft="404.999969331725,97.9999964732044" />
+        <NodeLayout
+          Size="155.773584905661,48"
+          Id="Package\Pet_DIM\Flat File Source"
+          TopLeft="377.499971414138,12.9999995321598" />
+        <NodeLayout
+          Size="113.207547169812,41.6603773584906"
+          Id="Package\Pet_DIM\Lookup"
+          TopLeft="399.666636818736,170.499994062028" />
+        <EdgeLayout
+          Id="Package\Pet_DIM.Paths[Lookup No Match Output]"
+          TopLeft="459.179216223881,212.160371420518">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,59.8396187908244"
+              Start="0,0"
+              End="0,52.3396187908244">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.3396187908244" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-55.80638671875,20.3651218954122,111.6127734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Pet_DIM.Paths[Flat File Source Output]"
+          TopLeft="455.099026976705,60.9999995321598">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,36.9999969410446"
+              Start="0,0"
+              End="0,29.4999969410446">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,29.4999969410446" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Pet_DIM.Paths[Sort Output]"
+          TopLeft="455.540850245042,139.660373831695">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,30.8396202303329"
+              Start="0,0"
+              End="0,23.3396202303329">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,23.3396202303329" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Pet_DIM\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Pet_DIM\Lookup">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[Pet_DIM]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
